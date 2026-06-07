@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='project.css'>
+</head>
+
+<body>
+    <!-- Main Projects Section -->
+<section id="projects" class="projects-section">
+    
+    <!-- ⬅️ मुख्य पेज का बैक बटन (जो यूजर को सीधे होम पेज पर वापस ले जाएगा) -->
+    <a href="index.html#Project" class="project-global-back-btn" title="Back to Home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </a>
+
+    <!-- Main Projects Section -->
+
+
+    <h2 class="project-main-title">My Projects</h2>
+
+    <!-- 1. 4 Role Selection Cards (About Section Style) -->
+    <div class="project-cards-grid" id="project-menu">
+        
+        <!-- Card 1: Frontend Developer -->
+        <div class="project-role-card p-glow-orange" data-project-target="project-dev-group">
+            <div class="p-role-icon">💻</div>
+            <h3>Frontend Developer</h3>
+        </div>
+
+        <!-- Card 2: UI/UX Designer -->
+        <div class="project-role-card p-glow-purple" data-project-target="project-uiux-group">
+            <div class="p-role-icon">✨</div>
+            <h3>UI/UX Designer</h3>
+        </div>
+
+        <!-- Card 3: Graphic Designer -->
+        <div class="project-role-card p-glow-green" data-project-target="project-graphic-group">
+            <div class="p-role-icon">🎨</div>
+            <h3>Graphic Designer</h3>
+        </div>
+
+        <!-- Card 4: Frontend Designer -->
+        <div class="project-role-card p-glow-cyan" data-project-target="project-designer-group">
+            <div class="p-role-icon">🚀</div>
+            <h3>Frontend Designer</h3>
+        </div>
+
+    </div>
+
+    <!-- 2. Dynamic Projects Display Box -->
+    <div class="dynamic-projects-display" id="projects-container">
+        
+        <!-- ⬅️ इनर बैक बटन (जो प्रोजेक्ट्स बंद करके वापस 4 कार्ड्स दिखाएगा) -->
+        <button class="project-back-btn" id="project-back-arrow" title="Back to Cards">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
+        
+        <!-- ================= A. FRONTEND DEVELOPER PROJECTS ================= -->
+        <div class="project-display-group" id="project-dev-group">
+            <div class="project-item-card">
+                <div class="project-thumbnail">❓</div>
+                <h4>Quiz App</h4>
+                <p>HTML, CSS, Interactive JavaScript</p>
+                <a href="https://github.com/shivbaba1905/quiz-app" class="project-link" target="_blank">View Source</a>
+                <a href="https://beamish-phoenix-cda709.netlify.app/" class="project-link" target="_blank">Live Code</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">📝</div>
+                <h4>Advanced Notes App</h4>
+                <p>JavaScript, LocalStorage & Tags</p>
+                <a href="https://github.com/shivbaba1905/advance-notes-app" class="project-link" target="_blank">View Source</a>
+                <a href="https://glistening-muffin-e83666.netlify.app/" class="project-link" target="_blank">Live Code</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">🔐</div>
+                <h4>Multi-Step Verification Form</h4>
+                <p>CSS Animations & JS Validation</p>
+                <a href="https://github.com/shivbaba1905/multistep-verification-form" class="project-link" target="_blank">View Source</a>
+                <a href="https://celadon-pixie-ca7100.netlify.app/" class="project-link" target="_blank">Live Code</a>
+            </div>
+        </div>
+
+        <!-- ================= B. UI/UX DESIGNER PROJECTS ================= -->
+        <div class="project-display-group" id="project-uiux-group">
+            <div class="project-item-card">
+                <div class="project-thumbnail">🎵</div>
+                <h4>Movie App</h4>
+                <p>Figma Prototype & UX Case Study</p>
+                <a href="https://github.com/shivbaba1905/netflix-app" class="project-link" target="_blank">View Design</a>
+                <a href="https://exquisite-zabaione-7d611e.netlify.app/" class="project-link" target="_blank">View Code</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">📚</div>
+                <h4>Food App</h4>
+                <p>User Research & Interactive Flow</p>
+                <a href="https://github.com/shivbaba1905/food-app" class="project-link" target="_blank">View Design</a>
+                <a href="https://app.netlify.com/projects/luminous-hotteok-ced13c/" class="project-link" target="_blank">View Code</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">🛍️</div>
+                <h4>Fitness App</h4>
+                <p>Wireframing & Modern UI Grid</p>
+                <a href="https://github.com/shivbaba1905/A-Fitness-App" class="project-link" target="_blank">View Design</a>
+                <a href="https://chic-platypus-aa3b52.netlify.app/" class="project-link" target="_blank">View Code</a>
+            </div>
+        </div>
+
+        <!-- ================= C. GRAPHIC DESIGNER PROJECTS ================= -->
+        <div class="project-display-group" id="project-graphic-group">
+            <div class="project-item-card">
+                <div class="project-thumbnail">✉️</div>
+                <h4>Business Card</h4>
+                <p>A Beautiful Business Card</p>
+                <a href="https://i.postimg.cc/JzrMQJKK/Untitled-design-(6).png" class="project-link" target="_blank">View</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">👰</div>
+                <h4>Wedding Album Design Photo</h4>
+                <p>A modern Wedding Album</p>
+                <a href="https://i.postimg.cc/Sx2V31ZS/Untitled-design-(7).png" class="project-link" target="_blank">View</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">🎸</div>
+                <h4>Music Flyer</h4>
+                <p>A Music Event Flyer</p>
+                <a href="https://i.postimg.cc/8s8gWfcW/musicfest-live-(1).png" class="project-link" target="_blank">View</a>
+            </div>
+        </div>
+
+        <!-- ================= D. FRONTEND DESIGNER PROJECTS ================= -->
+        <div class="project-display-group" id="project-designer-group">
+            <div class="project-item-card">
+                <div class="project-thumbnail">🔮</div>
+                <h4>Glassmorphism Auth Form</h4>
+                <p>Single Toggle Login & Sign-Up View</p>
+                <a href="https://github.com/shivbaba1905/glassform-login-form" class="project-link" target="_blank">View Source</a>
+                <a href="https://stirring-peony-0cfa0a.netlify.app/" class="project-link" target="_blank">Live Codee</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">🤖</div>
+                <h4>AI Chatbot Interface</h4>
+                <p>Figma Design + Responsive Chat UI</p>
+                <a href="https://github.com/shivbaba1905/A-Simple-Chatbot" class="project-link" target="_blank">View Source</a>
+                <a href="https://astonishing-jelly-ad33c4.netlify.app/" class="project-link" target="_blank">Live Code</a>
+            </div>
+            <div class="project-item-card">
+                <div class="project-thumbnail">💬</div>
+                <h4>WhatsApp Web Clone</h4>
+                <p>UI Wireframe + Component-Based Code</p>
+                <a href="https://github.com/shivbaba1905/A-Beautiful-Whatsapp-Clone" class="project-link" target="_blank">View Source</a>
+                <a href="https://nimble-hotteok-b76c41.netlify.app/" class="project-link" target="_blank">Live Code</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+<script src="project.js"></script>
+</html>

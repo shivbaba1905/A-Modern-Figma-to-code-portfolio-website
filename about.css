@@ -1,0 +1,131 @@
+    .about-section {
+    background-color: #550055; /* डिज़ाइन का गहरा पर्पल/मैजेंटा बैकग्राउंड */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 6%;
+    position: relative;
+    scroll-margin-top: 0px; /* स्क्रॉल एंकरिंग को सही रखने के लिए */
+}
+
+/* Back Arrow Button Styling */
+.back-arrow-btn {
+    position: absolute;
+    top: 40px;
+    left: 6%;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-arrow-btn:hover {
+    transform: translateX(-6px);
+    opacity: 0.8;
+}
+
+/* 4-Cards Responsive Grid Layout */
+.about-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Base Card Styling (Glassmorphism + Gradients) */
+.about-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 40px 24px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-card:hover {
+    transform: translateY(-12px);
+}
+
+/* SVG Icon Structure inside Cards */
+.card-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    stroke: #ffffff;
+}
+
+/* Card Headings */
+.about-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+}
+
+/* Card Descriptions */
+.about-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-weight: 300;
+    text-align: left; /* इमेज के अनुसार लेफ्ट-अलाइन टेक्स्ट */
+}
+
+/* 🌈 Dynamic Neon Glow Effects (हूबहू आपके Figma डिज़ाइन जैसा) */
+.glow-orange {
+    background: linear-gradient(180deg, rgba(255, 90, 95, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 0 40px 10px rgba(255, 90, 95, 0.35);
+}
+.glow-cyan {
+    background: linear-gradient(180deg, rgba(0, 229, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 0 40px 10px rgba(0, 229, 255, 0.35);
+}
+.glow-green {
+    background: linear-gradient(180deg, rgba(50, 255, 120, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 0 40px 10px rgba(50, 255, 120, 0.35);
+}
+.glow-pink {
+    background: linear-gradient(180deg, rgba(224, 64, 251, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 0 40px 10px rgba(224, 64, 251, 0.35);
+}
+
+/* 📱 Fully Mobile and Tablet Responsive Styles */
+@media (max-width: 1100px) {
+    .about-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* टैबलेट पर 2-2 कार्ड्स दिखेंगे */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .about-section {
+        padding: 100px 5% 60px 5%;
+    }
+    .back-arrow-btn {
+        top: 25px;
+    }
+    .about-cards-container {
+        grid-template-columns: 1fr; /* मोबाइल फोन पर 1-1 कार्ड दिखेगा */
+        gap: 30px;
+    }
+    .about-card {
+        padding: 35px 20px;
+    }
+}

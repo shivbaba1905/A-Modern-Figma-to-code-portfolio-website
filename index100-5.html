@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='Certificate.css'>
+</head>
+
+<body>
+    <!-- Main Certificates Section -->
+<section id="certificates" class="certificates-section">
+    
+    <!-- Global Back Button -->
+    <a href="index.html#Certificate" class="cert-back-btn" title="Back to Home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </a>
+
+    <h2 class="cert-main-title">My Certificates</h2>
+
+    <!-- ================= CATEGORY 1: FIRST INSTITUTION ================= -->
+    <div class="cert-category-block">
+        <h3 class="institute-title">🏫 Vision Institute Of Information Technology (Coaching - 1)</h3>
+        <div class="certificates-grid font-graphic-grid">
+            
+            <!-- Cert 1: Computer Fundamentals -->
+            <div class="cert-card glow-blue">
+                <div class="cert-img-container">
+                    <!-- अपनी फोटो का नाम यहाँ बदलें -->
+                    <img src="https://i.postimg.cc/zGcHgHcp/aplications.png" alt="Computer Certificate" class="cert-thumb">
+                </div>
+                <h4>Computer Fundamentals Photoshop , HTML5 And CorelDraw</h4>
+                <button class="view-full-btn" data-img="https://i.postimg.cc/wjL374D3/c1.png">Full View</button>
+            </div>
+    </div>
+
+    <!-- ================= CATEGORY 2: SECOND INSTITUTION ================= -->
+    <div class="cert-category-block">
+        <h3 class="institute-title">⚡ Manav Bharti Institute (Coaching - 2)</h3>
+        <div class="certificates-grid dev-grid">
+            
+            <!-- Cert 5: CSS 3 -->
+            <div class="cert-card glow-cyan">
+                <div class="cert-img-container">
+                    <img src="https://i.postimg.cc/rmJ85vpG/css.png" alt="CSS Certificate" class="cert-thumb">
+                </div>
+                <h4>Advanced CSS3 Styling</h4>
+                <button class="view-full-btn" data-img="https://i.postimg.cc/Gmx8XStM/c3.png">Full View</button>
+            </div>
+
+            <!-- Cert 6: JavaScript -->
+            <div class="cert-card glow-yellow">
+                <div class="cert-img-container">
+                    <img src="https://i.postimg.cc/0yD1pLWj/js.png" alt="JS Certificate" class="cert-thumb">
+                </div>
+                <h4>Core JavaScript ES6+</h4>
+                <button class="view-full-btn" data-img="https://i.postimg.cc/52BNxYMy/c2.png">Full View</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🌟 Full View Modal Popup (बड़ा सर्टिफिकेट देखने के लिए गुप्त बॉक्स) -->
+    <div class="cert-modal" id="certModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+</section>
+
+</body>
+<script src="Certificate.js"></script>
+</html>

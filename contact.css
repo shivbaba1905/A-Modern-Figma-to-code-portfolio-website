@@ -1,0 +1,202 @@
+.contact-section {
+    background-color: #ff8fa3; /* डिज़ाइन का ब्राइट पिंक बैकग्राउंड */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    position: relative; /* बैक एरो पोजीशनिंग के लिए जरूरी */
+}
+
+/* Back Arrow Circular Button */
+.contact-back-btn {
+    position: absolute;
+    top: 40px;
+    left: 6%;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+
+.contact-back-btn:hover {
+    transform: translateX(-5px);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Grey Form Container Layout */
+.form-container {
+    background-color: #dbdbdb; /* ग्रे बैकग्राउंड */
+    border: 2px solid #000000;
+    width: 90%;
+    max-width: 520px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-tabs {
+    display: flex;
+    border-bottom: 2px solid #000000;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    background: #e5e5e5;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #444444;
+    transition: all 0.2s ease;
+}
+
+/* एक्टिव इंडिकेटर लाइन - केवल सिलेक्टेड टेक्स्ट के नीचे */
+.tab-btn.active {
+    background: #dbdbdb;
+    color: #000000;
+    position: relative;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 30%;
+    height: 3px;
+    background-color: #000000;
+}
+
+.auth-form {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Input Wrappers with Icons */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    gap: 15px;
+    position: relative;
+}
+
+.input-icon svg {
+    stroke: #000000;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px 18px;
+    border: 1.5px solid #000000;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+}
+
+/* Password Eye Button */
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle svg {
+    stroke: #555555;
+}
+
+/* Submit Button Gradient & Perfect Contrast Text */
+.submit-btn {
+    background: linear-gradient(180deg, #ff4500 0%, #ffcc00 100%);
+    color: #000000; /* साफ़ रीडेबिलिटी के लिए काला रंग */
+    border: 2px solid #000000;
+    padding: 10px 45px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.03);
+}
+
+/* Initial Hide Configuration for Animation */
+#name-field, #address-field {
+    display: none; /* जावास्क्रिप्ट के जरिए खुलेगा */
+}
+
+/* Blue Footer Design Area */
+.footer {
+    background-color: #0e4aa6; /* गहरा नीला बैकग्राउंड */
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.credits {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.contact-link {
+    font-size: 0.88rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a svg {
+    stroke: #ffffff;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
+}
+
+/* Mobile Compatibility */
+@media (max-width: 600px) {
+    .contact-back-btn { top: 25px; left: 5%; }
+    .contact-section { padding-top: 100px; }
+    .auth-form { padding: 30px 15px; }
+}

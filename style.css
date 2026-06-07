@@ -1,0 +1,261 @@
+    /* 1. Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0559; /* डिज़ाइन का गहरा नीला बैकग्राउंड */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   💻 1. PC AUR BADI SCREEN KE LIYE DEFAULT DESIGN (Links Right Side Me Rehenge)
+   ========================================================================== */
+.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 40px;
+    background-color: transparent;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex !important; /* PC par row layout banayega */
+    flex-direction: row !important;
+    gap: 35px !important;
+    padding: 0 !important;
+    
+    /* ⚡ HOTFIX: Yeh links ko right corner me dhakel dega */
+    margin-left: auto !important; 
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   📱 2. SRF MOBILE (CHOTI SCREEN) KE LIYE DESIGN (3+3 No-Scroll Center Grid)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column !important; /* Mobile par logo upar links neeche */
+        gap: 15px !important;
+        padding: 15px 10px !important;
+    }
+
+    .nav-links {
+        display: grid !important; /* Mobile par grid layout trigger hoga */
+        grid-template-columns: repeat(3, 1fr) !important; /* 3-3 links ka arrangement */
+        gap: 12px 15px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        
+        /* ⚡ Mobile par center align karne ke liye margin-left reset kiya */
+        margin: 0 auto !important; 
+    }
+
+    .nav-links a {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+        display: block !important;
+        opacity: 0.8;
+    }
+}
+
+/* 3. Hero Section Layout */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    flex: 1;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* क्लिक करने योग्य टेक्स्ट का स्टाइल */
+.toggle-role {
+    cursor: pointer;
+    text-decoration: underline dotted; /* यूजर को पता चले यहाँ क्लिक करना है */
+    user-select: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.toggle-role:hover {
+    transform: scale(1.03);
+}
+
+/* दोनों रोल के टेक्स्ट का अलग-अलग परफेक्ट कलर */
+.frontend-color {
+    color: #ff3b30; /* फ्रंटएंड के लिए लाल रंग */
+}
+
+.graphic-color {
+    color: #ccff00; /* ग्राफिक डिज़ाइनर के लिए नियॉन हरा-पीला रंग */
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+/* बटन स्टाइल्स (रीडेबिलिटी को 100% सही किया गया है) */
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-yellow {
+    background: linear-gradient(135deg, #ffcc00, #ff9500);
+    color: #000000; /* काला टेक्स्ट बिल्कुल साफ पढ़ने के लिए */
+    box-shadow: 0 5px 15px rgba(255, 149, 0, 0.2);
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, #007aff, #0040dd);
+    color: #ffffff; /* सफ़ेद टेक्स्ट बढ़िया कंट्रास्ट के लिए */
+    box-shadow: 0 5px 15px rgba(0, 64, 221, 0.2);
+}
+
+/* 4. Profile Image & Dynamic Glow Effect */
+.hero-image-container {
+    display: flex;
+    justify-content: center; /* Mobile par screen ke center me rakhega */
+    align-items: center;
+    width: 100%;       
+    margin: 0 auto;    
+}
+
+/* 💻 PC/Badi Screen ke liye perfect adjustment */
+@media (min-width: 768px) {
+    .hero-image-container {
+        max-width: 40%; 
+        justify-content: center; 
+        margin-left: auto; /* ⚡ Yeh image ko halka sa right me khiskakar bilkul center kar dega */
+        margin-right: 0;   /* Right side se chipka rkhne ke liye */
+    }
+}
+
+.image-glow-wrapper {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;    
+    border-radius: 50%;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease;
+}
+
+/* Glow classes jo JS se badlengi */
+.glow-blue {
+    box-shadow: 0 0 60px 20px rgba(0, 122, 255, 0.6);
+}
+
+.glow-green {
+    box-shadow: 0 0 60px 20px rgba(204, 255, 0, 0.4);
+}
+
+.image-glow-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 5. Smooth Fade-In Animation for Text Change */
+.fade-animation {
+    animation: fadeInEffect 0.5s ease forwards;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 6. Responsive Design (Mobile Friendly) */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-links a { margin-left: 15px; font-size: 0.85rem; }
+    .hero-container { flex-direction: column-reverse; text-align: center; padding: 50px 5%; gap: 40px; }
+    .hero-content { max-width: 100%; }
+    .btn-group { justify-content: center; }
+    .image-glow-wrapper { width: 220px; height: 220px; }
+}
+
+.frontend-des-color {
+    color: #ffae00; 
+}
+
+/* Frontend Designer के लिए प्रोफाइल फोटो के पीछे आसमानी ग्लो */
+.glow-cyan {
+    box-shadow: 0 0 60px 20px rgba(235, 154, 5, 0.5);
+}
+/* UI/UX Designer के लिए पिंक/पर्पल टेक्स्ट कलर */
+.uiux-color {
+    color: #e040fb; 
+}
+
+/* UI/UX Designer के लिए प्रोफाइल फोटो के पीछे पर्पल ग्लो */
+.glow-purple {
+    box-shadow: 0 0 60px 20px rgba(224, 64, 251, 0.5);
+}

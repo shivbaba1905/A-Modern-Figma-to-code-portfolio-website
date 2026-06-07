@@ -1,0 +1,127 @@
+    /* ================= SKILLS SECTION STYLES ================= */
+.skills-section {
+    background-color: #90ee90; /* डिज़ाइन का लाइट ग्रीन बैकग्राउंड */
+    min-height: 100vh;
+    padding: 90px 8%;
+    color: #000000;
+    position: relative; /* बैक बटन को टिकाने के लिए */
+}
+
+/* ⬅️ मेन पेज का ग्लोबल बैक बटन */
+.skills-global-back-btn {
+    position: absolute;
+    top: 40px;
+    left: 6%;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.5);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 15;
+}
+.skills-global-back-btn:hover {
+    transform: translateX(-5px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.section-title {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+/* 4 Cards Grid Setup */
+.skills-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+/* जब बार्स खुलेंगे तो मेन पेज का बैक बटन और टाइटल भी छुप जाएंगे */
+.skills-cards-grid.hidden,
+.skills-cards-grid.hidden ~ .section-title,
+.skills-cards-grid.hidden ~ .skills-global-back-btn {
+    display: none !important;
+}
+
+/* Base Card (Figma थीम के अनुसार थिक सॉलिड बॉर्डर्स) */
+.skill-role-card {
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 🌈 हूबहू आपके फिग्मा स्क्रीनशॉट जैसे सॉलिड बॉर्डर्स और बैकग्राउंड कलर्स */
+.role-dev { background-color: #ffeef0; border: 3px solid #ff4d6d; }
+.role-uiux { background-color: #f7e8ff; border: 3px solid #d000ff; }
+.role-graphic { background-color: #ffffdf; border: 3px solid #e6c300; }
+.role-designer { background-color: #e6faff; border: 3px solid #00bfff; }
+
+/* 🌟 होवर करने पर सॉलिड मैचिंग नियॉन ग्लो इफ़ेक्ट */
+.role-dev:hover { transform: translateY(-8px); box-shadow: 0 0 35px 8px rgba(255, 77, 109, 0.6); }
+.role-uiux:hover { transform: translateY(-8px); box-shadow: 0 0 35px 8px rgba(208, 0, 255, 0.6); }
+.role-graphic:hover { transform: translateY(-8px); box-shadow: 0 0 35px 8px rgba(230, 195, 0, 0.7); }
+.role-designer:hover { transform: translateY(-8px); box-shadow: 0 0 35px 8px rgba(0, 191, 255, 0.6); }
+
+.role-icon { font-size: 2.5rem; margin-bottom: 15px; }
+.skill-role-card h3 { font-size: 1.15rem; font-weight: 700; color: #000000; }
+
+/* --- Dynamic Bars Box --- */
+.dynamic-skills-display {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 70px 45px 45px 45px;
+    border-radius: 24px;
+    border: 2px solid #000000;
+    position: relative;
+    display: none;
+}
+.dynamic-skills-display.active { display: block; animation: skillBoxReveal 0.4s ease-out forwards; }
+
+/* ⬅️ प्रोग्रेस बार के अंदर का बैक बटन */
+.skills-inner-back-btn {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+.skills-inner-back-btn:hover { background: #000000; color: #ffffff; }
+
+.skills-progress-group { display: none; grid-template-columns: repeat(2, 1fr); gap: 35px 60px; }
+.skills-progress-group.active { display: grid; }
+.skill-progress-box { display: flex; flex-direction: column; gap: 10px; }
+.skill-progress-box span { font-size: 1.05rem; font-weight: 600; }
+
+.bar-bg { background-color: #ffffff; width: 100%; height: 14px; border-radius: 10px; border: 1.5px solid #000000; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 10px; width: 0; }
+
+.orange { background: #ff5a5f; }
+.blue { background: #007aff; }
+.yellow { background: #ffcc00; }
+.purple { background: #aa00ff; }
+.cyan { background: #00e5ff; }
+.pink { background: #e040fb; }
+
+@keyframes skillBoxReveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1024px) { .skills-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .skills-progress-group { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .skills-cards-grid { grid-template-columns: 1fr; } }

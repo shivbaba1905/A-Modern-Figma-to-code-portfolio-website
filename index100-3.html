@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='skill.css'>
+</head>
+
+<body>
+        <!-- Main Skills Section -->
+    <section id="skills" class="skills-section">
+        
+        <!-- ⬅️ ग्लोबल बैक बटन (जो स्किल्स पेज से सीधे होम/अबाउट पेज पर ले जाएगा) -->
+        <a href="index.html#skills" class="skills-global-back-btn" title="Back to About Section">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+
+        <h2 class="section-title">My Skills</h2>
+
+        <!-- 1. 4 Role Selection Cards -->
+        <div class="skills-cards-grid" id="skills-menu">
+            
+            <!-- Card 1: Frontend Developer (Pink Border) -->
+            <div class="skill-role-card role-dev" data-target="skills-dev">
+                <div class="role-icon">💻</div>
+                <h3>Frontend Developer</h3>
+            </div>
+
+            <!-- Card 2: UI/UX Designer (Purple Border) -->
+            <div class="skill-role-card role-uiux" data-target="skills-uiux">
+                <div class="role-icon">✨</div>
+                <h3>UI/UX Designer</h3>
+            </div>
+
+            <!-- Card 3: Graphic Designer (Yellow Border) -->
+            <div class="skill-role-card role-graphic" data-target="skills-graphic">
+                <div class="role-icon">🎨</div>
+                <h3>Graphic Designer</h3>
+            </div>
+
+            <!-- Card 4: Frontend Designer (Cyan Border) -->
+            <div class="skill-role-card role-designer" data-target="skills-designer">
+                <div class="role-icon">🚀</div>
+                <h3>Frontend Designer</h3>
+            </div>
+
+        </div>
+
+        <!-- 2. Dynamic Progress Bars Box (Initially Hidden) -->
+        <div class="dynamic-skills-display" id="bars-container">
+            
+            <!-- ⬅️ इनर बैक बटन (जो प्रोग्रेस बार को बंद करके वापस 4 कार्ड्स दिखाएगा) -->
+            <button class="skills-inner-back-btn" id="skills-back-arrow" title="Back to Cards">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </button>
+            
+            <!-- Frontend Developer Progress Bars -->
+            <div class="skills-progress-group" id="skills-dev">
+                <div class="skill-progress-box"><span>HTML</span><div class="bar-bg"><div class="bar-fill orange" style="width: 95%;"></div></div></div>
+                <div class="skill-progress-box"><span>CSS</span><div class="bar-bg"><div class="bar-fill blue" style="width: 90%;"></div></div></div>
+                <div class="skill-progress-box"><span>JavaScript</span><div class="bar-bg"><div class="bar-fill yellow" style="width: 80%;"></div></div></div>
+                <div class="skill-progress-box"><span>Bootstrap</span><div class="bar-bg"><div class="bar-fill purple" style="width: 85%;"></div></div></div>
+                <div class="skill-progress-box"><span>Tailwind CSS</span><div class="bar-bg"><div class="bar-fill cyan" style="width: 75%;"></div></div></div>
+            </div>
+
+            <!-- UI/UX Designer Progress Bars -->
+            <div class="skills-progress-group" id="skills-uiux">
+                <div class="skill-progress-box"><span>Figma</span><div class="bar-bg"><div class="bar-fill pink" style="width: 90%;"></div></div></div>
+                <div class="skill-progress-box"><span>UX Knowledge</span><div class="bar-bg"><div class="bar-fill blue" style="width: 80%;"></div></div></div>
+                <div class="skill-progress-box"><span>Prototype</span><div class="bar-bg"><div class="bar-fill purple" style="width: 85%;"></div></div></div>
+                <div class="skill-progress-box"><span>Adobe Photoshop</span><div class="bar-bg"><div class="bar-fill cyan" style="width: 70%;"></div></div></div>
+            </div>
+
+            <!-- Graphic Designer Progress Bars -->
+            <div class="skills-progress-group" id="skills-graphic">
+                <div class="skill-progress-box"><span>Photoshop</span><div class="bar-bg"><div class="bar-fill orange" style="width: 85%;"></div></div></div>
+                <div class="skill-progress-box"><span>Canva</span><div class="bar-bg"><div class="bar-fill pink" style="width: 95%;"></div></div></div>
+            </div>
+
+            <!-- Frontend Designer Progress Bars -->
+            <div class="skills-progress-group" id="skills-designer">
+                <div class="skill-progress-box"><span>HTML</span><div class="bar-bg"><div class="bar-fill orange" style="width: 90%;"></div></div></div>
+                <div class="skill-progress-box"><span>CSS</span><div class="bar-bg"><div class="bar-fill blue" style="width: 85%;"></div></div></div>
+                <div class="skill-progress-box"><span>JavaScript</span><div class="bar-bg"><div class="bar-fill yellow" style="width: 75%;"></div></div></div>
+                <div class="skill-progress-box"><span>Bootstrap</span><div class="bar-bg"><div class="bar-fill purple" style="width: 80%;"></div></div></div>
+                <div class="skill-progress-box"><span>Tailwind CSS</span><div class="bar-bg"><div class="bar-fill cyan" style="width: 70%;"></div></div></div>
+                <div class="skill-progress-box"><span>Figma</span><div class="bar-bg"><div class="bar-fill pink" style="width: 85%;"></div></div></div>
+            </div>
+
+        </div>
+    </section>
+</body>
+<script src="skill.js"></script>
+</html>
