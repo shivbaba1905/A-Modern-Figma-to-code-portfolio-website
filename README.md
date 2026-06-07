@@ -12,7 +12,7 @@ Code Version
 
 ## ✨ Premium Interactive Components
 This portfolio is built scratch with optimized logic and features 100% smooth, user-focused micro-interactions:
-* 🌗 **Light / Dark Mode Toggle:** Fully dynamic theme engine seamlessly synchronized across the layout.
+
 
 * 📑 **Interactive Nav Tabs:** Fluid component switching for clean project segregation.
 
